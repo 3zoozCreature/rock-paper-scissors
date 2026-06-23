@@ -20,3 +20,13 @@ body {
     border: solid 2px pink;
     cursor: pointer;
 }
+
+.hidden {
+    visibility: hidden;
+}
+
+#reset {
+    font-size: 15px;
+    padding: 2px;
+    background-color: pink;
+}
