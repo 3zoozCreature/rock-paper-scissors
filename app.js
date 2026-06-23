@@ -1,7 +1,9 @@
 /*-------------------------------- Constants --------------------------------*/
-
+const choicesArr = ['rock', 'paper', 'scissors']
 /*-------------------------------- Variables --------------------------------*/
 let userChoice = null
+let computerChoice = null
+
 /*------------------------ Cached Element References ------------------------*/
 const choices = document.querySelector('#choices')
 const rock = document.querySelector('#rock')
@@ -11,7 +13,7 @@ const reset = document.querySelector('#reset')
 /*----------------------------- Event Listeners -----------------------------*/
 choices.addEventListener('click', function (event) {
     userChoice = event.target.id
-
+let randomIndex = Math.floor(Math.random() * choicesArr.length)
     //to hide buttons that were no the choice
     if (userChoice === 'rock') {
         //add hidden class to paper and scissors
@@ -21,11 +23,16 @@ choices.addEventListener('click', function (event) {
     } if (userChoice === 'paper') {
         rock.classList.add('hidden')
         scissors.classList.add('hidden')
+        console.log('user chose paper')
     } if (userChoice === 'scissors') {
         rock.classList.add('hidden')
         paper.classList.add('hidden')
+        console.log('user chose scissors')
     }
-    console.log('userChoice is: ', userChoice)
+
+    //computer makes a choice
+    computerChoice = choicesArr[randomIndex]
+    console.log('computerChoice is: ', computerChoice)
 })
 
 reset.addEventListener('click', function () {
