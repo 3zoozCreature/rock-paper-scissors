@@ -13,9 +13,10 @@ body {
     padding: 5px;
     height: 100px;
     width: 100px;
+    background-color:darkorchid;
 }
 
 .choice:hover {
     border: solid 2px pink;
-
+    cursor: pointer;
 }
